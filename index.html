@@ -15,17 +15,15 @@
 <script src="js/footable.sorting.js"></script>
 <script src="js/footable.filtering.js"></script>
 <script src="js/footable.paging.js"></script>
-<script src="js/modal.js"></script>
+
 <script>
 jQuery(function($) {
-
 	var ft = FooTable.init('.table', {
-		// we only load the column definitions as the row data is loaded through the button clicks
                 "columns": [
-  {"name":"yougo", "title":"用語"},
-  {"name":"kana", "title":"かな"},
-  {"breakpoints": "xs sm md", "name":"setumei", "title":"説明"}
-],
+					{"name":"yougo", "title":"用語"},
+					{"name":"kana", "title":"かな"},
+					{"breakpoints": "xs sm md", "name":"setumei", "title":"説明"}
+				],
                 "rows": $.get('https://weatherterms.netlify.app/word.json')
 	});
 
