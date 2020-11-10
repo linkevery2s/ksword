@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>気象用語辞典</title>
+<title>気象用語データベース</title>
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/footable.core.standalone.css">
 <link rel="stylesheet" href="css/footable.filtering.css">
@@ -26,7 +26,7 @@ jQuery(function($) {
   {"name":"kana", "title":"かな"},
   {"breakpoints": "xs sm md", "name":"setumei", "title":"説明"}
 ],
-                "rows": $.get('https://linkevery2s.github.io/bsinsight/word/rows.json')
+                "rows": $.get('https://weatherterms.netlify.app/word.json')
 	});
 
 
@@ -35,9 +35,13 @@ jQuery(function($) {
 </head>
 <body>
 
+<div id="header">
+<h1>気象用語データベース</h1>
+</div>
+
+<div id ="main">
 <table class="table" data-sorting="true" data-filtering="true" data-paging="true" data-paging-size="15"></table>
-
-
+</div>
 
 
 </body>
